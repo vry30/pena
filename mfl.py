@@ -11,7 +11,7 @@ def ste(use):
 
 
 def search(id,pw):
-          for i in range(1000):
+          for i in range(100):
              id +=1
              for line in pw:
                  pwd = line.strip()
@@ -36,14 +36,14 @@ def program():
 def main():
        put='1'
        if put == '1' or put == '01':
-          di=int(random.randint(10,1500))
+          di=int(random.randint(100,10000))
 #             user=int("%000" % (di))
           his=open('history.txt','r').read()
           if str(di) in his.split():
                  print('[=]',di,'Sudah digunakan')
                  program()
           else:
-                 user=int("%s000" % (di))
+                 user=int("%s00" % (di))
                  pasw=open('fin.txt','r').readlines()
                  search(user,pasw)
                  hs=open('history.txt','a')
