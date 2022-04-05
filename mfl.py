@@ -1,4 +1,4 @@
-import requests,time,sys,os,random
+import requests,time,sys,os,random,telepot
 from requests import ConnectionError
 url1 = "https://trade.topbos.com/trade/pwdLogin.do"
 
