@@ -45,10 +45,8 @@ def search(idu,pw):
                           r = open('hasilnew.txt','a')
                           r.write('{} : {}\n'.format(idu,pwd))
                           r.close()
-                     elif '2034' in str(resp.text):
-                          print(idu,pwd,"wrong")
                      else:
-                          print('rusak')
+                          print(idu,pwd,"wrong")
                  except ConnectionError:
                       time.sleep(3)
 def program():
