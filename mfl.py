@@ -18,7 +18,9 @@ if not os.path.exists("fin.txt"):
 
 def ste(use):
     try:
-        requests.get(f'https://api.telegram.org/bot5162664077:AAFAjX2fJJiZUrpFroio2MaKJqsqqDBh7F8/sendMessage?chat_id=1380298324&text={use}')
+        rep = requests.get('https://api.telegram.org/bot5162664077:AAFAjX2fJJiZUrpFroio2MaKJqsqqDBh7F8/sendMessage?chat_id=1380298324&text={}'.format(use))
+        if rep.ok:
+            print('\ntekirim\n')
     except:
         pass
 #    token = "5137896150:AAEcXG7fkPYa3y0xowgM-1yxMHNP3TA9HJs"
